@@ -1,9 +1,10 @@
+import os
 import boto3
 from isFemale import is_female
 import sox
 
-AWS_ACCESS_KEY_ID="AKIARPZ6RCEQD6WCCT6O"
-AWS_SECRET_ACCESS_KEY="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"
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
 
 def generate_tts(text):

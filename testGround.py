@@ -1,25 +1,14 @@
+import os
 import praw
 from screenshot import website_screenshot
 import random
 
-"""
-READ ONLY CLIENT
-"""
-# reddit = praw.Reddit(
-#     client_id="qCVr1JRSmLM2r1aTQB8A1w",
-#     client_secret="y3GDxuL7D7fe2eU55oe-A76edyVzwg",
-#     user_agent="PostFetcher/0.1 by u/ClueRepresentative83",
-# )
-
-"""
-AUTHORIZED CLIENT
-"""
 reddit = praw.Reddit(
-    client_id="qCVr1JRSmLM2r1aTQB8A1w",
-    client_secret="y3GDxuL7D7fe2eU55oe-A76edyVzwg",
-    password="GANKR5I3%k",
+    client_id=os.getenv("REDDIT_CLIENT_ID"),
+    client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
+    password=os.getenv("REDDIT_PASSWORD"),
     user_agent="PostFetcher/0.1 by u/ClueRepresentative83",
-    username="ClueRepresentative83",
+    username=os.getenv("REDDIT_USERNAME"),
 )
 
 subreddit = reddit.subreddit("AmITheAsshole")
@@ -70,7 +59,7 @@ I implemented it today,my daughter and I loved it since we could at and have lef
     speed = 1.5  # Increase the speed by 50%
     adjust_speed(input_file, output_file, speed)
     
-    api_key = "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"
+    api_key = os.getenv("OPENAI_API_KEY")
     input_audio_file_path = "assets/audio.mp3"
     output_srt_file_path = "assets/subtitles.srt"
     generate_srt(input_audio_file_path, output_srt_file_path, api_key)

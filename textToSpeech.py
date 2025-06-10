@@ -1,10 +1,11 @@
+import os
 import requests
 from isFemale import is_female
 
 def generate_tts(text):
     # Constants
     CHUNK_SIZE = 1024
-    XI_API_KEY = "a1c36e67bb5fd426c2452069e02afe4e"
+    XI_API_KEY = os.getenv("ELEVENLABS_API_KEY")
     OUTPUT_PATH = "assets/audio.mp3"
 
     voice_id = "pNInz6obpgDQGcFmaJgB"

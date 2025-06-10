@@ -73,10 +73,3 @@ def generate_srt(input_audio_file, output_srt_file, api_key):
         print(f"Subtitles have been saved to {output_srt_file}")
     except Exception as e:
         print(f"Transcription failed: {str(e)}")
-
-# # Usage example
-# api_key = "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"
-# input_audio_file_path = "assets/audio.mp3"
-# output_srt_file_path = "assets/subtitles.srt"
-
-# generate_srt(input_audio_file_path, output_srt_file_path, api_key)
