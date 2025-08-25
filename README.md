@@ -1,7 +1,7 @@
 # Reddit-TikTok Video Generator
 
 ## Overview
-This project automates the creation of Reddit-style TikTok videos, where an AI narrator reads a Reddit post while synchronized text appears on the screen, accompanied by a background video. The final product is a short-form, TikTok-style video generated with optimized rendering techniques.
+This project automates the creation of Reddit-style TikTok videos, where an AI narrator reads a Reddit post while synchronized text appears on the screen, accompanied by a background video. The final product is a short-form, TikTok-style video generated with optimized rendering techniques
 
 ## How It Works
 1. **Fetch Reddit Post**: The script retrieves posts from Reddit using the Reddit API.
